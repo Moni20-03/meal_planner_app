@@ -7,7 +7,12 @@ import os
 import json
 from openai import OpenAI
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+def get_client():
+    """Get OpenAI client instance."""
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise ValueError("OPENAI_API_KEY environment variable is not set")
+    return OpenAI(api_key=api_key)
 
 
 def generate_meal_plan(days: int, preferences: str, servings: int, target_calories: int) -> dict:
@@ -68,6 +73,7 @@ Ensure each day has Breakfast, Lunch, Dinner, and optionally Snacks. Make it rea
 
     try:
         # Call OpenAI API
+        client = get_client()
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
@@ -115,6 +121,7 @@ def test_openai_connection() -> bool:
             return False
         
         # Simple test call
+        client = get_client()
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": "Say 'OK'"}],
