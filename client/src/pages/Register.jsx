@@ -47,17 +47,22 @@ export default function Register({ onLogin }) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
+    <div
+      className="min-h-screen flex items-center justify-center bg-cover bg-center py-12 px-4 sm:px-6 lg:px-8"
+      style={{
+        backgroundImage: "url('images/bg4.jpg')",
+      }}
+    >
+      <div className="max-w-md w-full space-y-8 bg-green-50 bg-opacity-70 p-8 rounded-xl shadow-lg backdrop-blur-md border border-green-100">
         <div>
           <h2 className="text-center text-4xl font-bold text-gray-900">
             🍽️ AI Meal Planner
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
+          <p className="mt-2 text-center text-sm text-gray-700">
             Create your account
           </p>
         </div>
-        
+
         {error && (
           <div className="bg-red-50 border border-red-400 text-red-700 px-4 py-3 rounded relative">
             {error}

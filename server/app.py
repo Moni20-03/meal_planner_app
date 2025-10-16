@@ -5,8 +5,16 @@ Main entry point for the backend API.
 
 from flask import Flask, jsonify
 from flask_cors import CORS
-import os
 from dotenv import load_dotenv
+import os
+from pathlib import Path
+
+# Explicitly load .env from the same directory as app.py
+dotenv_path = Path(__file__).parent / ".env"
+load_dotenv(dotenv_path)
+
+# Debug check
+print("Loaded OPENAI_API_KEY:", os.getenv("OPENAI_API_KEY"))
 
 # Load environment variables
 load_dotenv()

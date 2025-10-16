@@ -26,8 +26,13 @@ export default function Login({ onLogin }) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
+    <div
+      className="min-h-screen flex items-center justify-center bg-cover bg-center py-12 px-4 sm:px-6 lg:px-8"
+      style={{
+        backgroundImage: "url(images/bg1.avif)",
+      }}
+    >
+      <div className="max-w-md w-full space-y-8 bg-white bg-opacity-90 p-8 rounded-xl shadow-lg backdrop-blur-md">
         <div>
           <h2 className="text-center text-4xl font-bold text-gray-900">
             🍽️ AI Meal Planner
@@ -36,7 +41,7 @@ export default function Login({ onLogin }) {
             Sign in to your account
           </p>
         </div>
-        
+
         {error && (
           <div className="bg-red-50 border border-red-400 text-red-700 px-4 py-3 rounded relative">
             {error}
