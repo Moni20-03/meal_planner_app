@@ -18,6 +18,14 @@ JWT_SECRET = os.getenv('JWT_SECRET', 'dev-secret-key-change-in-production')
 JWT_ALGORITHM = 'HS256'
 JWT_EXPIRATION_HOURS = 24
 
+# Warn if using default JWT secret
+if JWT_SECRET == 'dev-secret-key-change-in-production':
+    import warnings
+    warnings.warn(
+        "Using default JWT_SECRET! Set JWT_SECRET environment variable for production.",
+        RuntimeWarning
+    )
+
 
 def create_token(user_id: str) -> str:
     """Create a JWT token for a user."""

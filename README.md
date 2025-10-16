@@ -68,7 +68,9 @@ Set the following secrets in your Replit environment:
 
 - **OPENAI_API_KEY**: Your OpenAI API key (required)
   - Get one at: https://platform.openai.com/api-keys
-- **JWT_SECRET**: Secret key for JWT signing (optional, auto-generated if not set)
+- **JWT_SECRET**: Secret key for JWT signing (optional for development, REQUIRED for production)
+  - Development: Uses default key with warning
+  - Production: MUST set a strong random secret before deployment
 - **SESSION_SECRET**: Session secret (already configured)
 
 ### 2. Install Dependencies
@@ -139,6 +141,23 @@ python app.py
 cd client
 npm run dev
 ```
+
+## Security Considerations
+
+⚠️ **Important for Production Deployment:**
+
+1. **JWT Secret**: The application uses a default JWT_SECRET for development. Before deploying to production:
+   - Set a strong random JWT_SECRET environment variable
+   - Generate one using: `python -c "import secrets; print(secrets.token_hex(32))"`
+   - Never commit secrets to version control
+
+2. **Database**: Currently uses in-memory storage (data lost on restart). For production:
+   - Migrate to PostgreSQL or SQLite for persistent storage
+   - Implement proper database migrations
+
+3. **HTTPS**: Always use HTTPS in production to protect JWT tokens and user data
+
+4. **Rate Limiting**: Current rate limiting is basic. Consider using Redis for distributed rate limiting in production
 
 ## License
 
