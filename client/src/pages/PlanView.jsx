@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-// import Header from '../components/Header';
+import Header from '../components/Header';
 import { mealPlansAPI } from '../api';
 
 export default function PlanView({ user, onLogout }) {
