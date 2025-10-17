@@ -93,7 +93,7 @@ export default function Profile({ user, onLogout }) {
               {/* Avatar */}
               <div className="relative inline-block">
                 <img 
-                  src="public/images/avatar.png" 
+                  src="https://static.vecteezy.com/system/resources/previews/057/357/660/non_2x/cheerful-3d-avatar-with-glasses-for-digital-marketing-free-png" 
                   alt="Profile" 
                   className="w-32 h-32 rounded-full border-4 border-primary-500 object-cover mx-auto shadow-lg"
                 />
