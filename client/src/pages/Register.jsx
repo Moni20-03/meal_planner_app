@@ -50,7 +50,7 @@ export default function Register({ onLogin }) {
     <div
       className="min-h-screen flex items-center justify-center bg-cover bg-center py-12 px-4 sm:px-6 lg:px-8"
       style={{
-        backgroundImage: "url('images/bg4.jpg')",
+        backgroundImage: "url('public/images/bg4.jpg')",
       }}
     >
       <div className="max-w-md w-full space-y-8 bg-green-50 bg-opacity-70 p-8 rounded-xl shadow-lg backdrop-blur-md border border-green-100">

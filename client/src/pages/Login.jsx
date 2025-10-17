@@ -29,7 +29,7 @@ export default function Login({ onLogin }) {
     <div
       className="min-h-screen flex items-center justify-center bg-cover bg-center py-12 px-4 sm:px-6 lg:px-8"
       style={{
-        backgroundImage: "url(images/bg1.avif)",
+        backgroundImage: "url(public/images/bg1.avif)",
       }}
     >
       <div className="max-w-md w-full space-y-8 bg-white bg-opacity-90 p-8 rounded-xl shadow-lg backdrop-blur-md">

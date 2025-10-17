@@ -41,7 +41,7 @@ export default function Header({ user, onLogout }) {
   {/* Avatar + Name */}
   <Link to="/profile" className="flex items-center space-x-3 group">
     <img 
-      src="/images/avatar.png" 
+      src="public/images/avatar.png" 
       alt="User Avatar" 
       className="w-12 h-12 rounded-full border-2 border-primary-500 object-cover group-hover:scale-105 transition-transform shadow-sm"
     />

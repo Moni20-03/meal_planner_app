@@ -93,7 +93,7 @@ export default function Profile({ user, onLogout }) {
               {/* Avatar */}
               <div className="relative inline-block">
                 <img 
-                  src="/images/avatar.png" 
+                  src="public/images/avatar.png" 
                   alt="Profile" 
                   className="w-32 h-32 rounded-full border-4 border-primary-500 object-cover mx-auto shadow-lg"
                 />
