@@ -55,7 +55,7 @@ export default function Header({ user, onLogout }) {
     className="flex items-center space-x-1 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-md transition-transform transform hover:scale-105"
   >
     <LogOut size={18} />
-    <span></span>
+    <span>Logout</span>
   </button>
 </div>
         </div>
