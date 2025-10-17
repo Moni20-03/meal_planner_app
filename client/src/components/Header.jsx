@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Home, PlusCircle, LogOut, User } from 'lucide-react';
-
+import avataricon from 'client/public/images/avatar.png'
 export default function Header({ user, onLogout }) {
   return (
     <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
@@ -41,7 +41,7 @@ export default function Header({ user, onLogout }) {
   {/* Avatar + Name */}
   <Link to="/profile" className="flex items-center space-x-3 group">
     <img 
-      src="public/images/avatar.png" 
+      src={avataricon} 
       alt="User Avatar" 
       className="w-12 h-12 rounded-full border-2 border-primary-500 object-cover group-hover:scale-105 transition-transform shadow-sm"
     />
